@@ -24,9 +24,13 @@
             <main>
                 <h1>Text heading</h1>
 
-                <p>Hi there!</p>
-                <p>It works!</p>
-
+                {% for account in accounts %}
+                    <h2><a href="">{{ account.name }}</a></h2>
+                    <p>ID: {{ account.id }}</p>
+                    <p>Type: {{ account.type }}</p>
+                    <p>Owned by: {{ account.owner }}</p>
+                {% endfor %}
+                
                 <aside>
                     <p>Test side text</p>
                 </aside>
